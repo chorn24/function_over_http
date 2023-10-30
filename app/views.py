@@ -3,17 +3,17 @@ from django.http.response import HttpResponse
 from django.http.request import HttpRequest
 
 
-def Hello_Friend(HttpRequest, name) -> HttpResponse:
+def Hello_Friend(request:HttpRequest, name: str) -> HttpResponse:
     hey = f"Hey, {name}!"
     return HttpResponse(hey)
 
 
-def How_Old(request, end, birthyear) -> HttpResponse:
+def How_Old(request:HttpRequest, end: int, birthyear: int) -> HttpResponse:
     age = end - birthyear
     return HttpResponse(age)
 
 
-def order(request, burgers, fries, drinks) -> HttpResponse:
+def order(request:HttpRequest, burgers:int, fries:int, drinks:int) -> HttpResponse:
     burger_price = 4.50
     fries_price = 1.5
     drinks_price = 1
