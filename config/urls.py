@@ -18,8 +18,8 @@ from django.urls import path
 from app.views import Hello_Friend, How_Old, order
 
 urlpatterns = [
-    path('age-in/<int:end>/<int:birthyear>/', How_Old),
+    path('age-in/<int:end>/<int:birth_year>', How_Old),
     path('admin/', admin.site.urls),
-    path('hey/<name>/', Hello_Friend),
+    path('hey/<str:name>', Hello_Friend),
     path('order-total/<int:burgers>/<int:fries>/<int:drinks>', order)
 ]

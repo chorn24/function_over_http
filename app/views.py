@@ -4,12 +4,11 @@ from django.http.request import HttpRequest
 
 
 def Hello_Friend(request:HttpRequest, name: str) -> HttpResponse:
-    hey = f"Hey, {name}!"
-    return HttpResponse(hey)
+    return HttpResponse(f"Hey, {name}!")
 
 
-def How_Old(request:HttpRequest, end: int, birthyear: int) -> HttpResponse:
-    age = end - birthyear
+def How_Old(request:HttpRequest, end: int, birth_year: int) -> HttpResponse:
+    age = end - birth_year
     return HttpResponse(age)
 
 
